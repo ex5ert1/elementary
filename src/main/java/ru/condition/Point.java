@@ -4,7 +4,7 @@ public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
         double dx = x2 - x1;
         double dy = y2 - y1;
-        double rsl = Math.sqrt(dx * dx + dy * dy);
+        double rsl = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
         return rsl;
     }
 
