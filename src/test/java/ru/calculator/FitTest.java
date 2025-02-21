@@ -1,6 +1,7 @@
 package ru.calculator;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 class FitTest {
@@ -15,9 +16,9 @@ class FitTest {
 
     @Test
     void whenWoman175Then86Dot25() {
-            short in = 175;
-            double expected = 86.25;
-            double out = Fit.manWeight(in);
-            assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        short in = 175;
+        double expected = 86.25;
+        double out = Fit.manWeight(in);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 }
