@@ -27,7 +27,7 @@ class PointTest {
     }
 
     @Test
-    void when1011to201110then2() {
+    void when1011to201110then99Dot5037() {
         double expected = 99.5037;
         int x1 = 10;
         int y1 = 11;
