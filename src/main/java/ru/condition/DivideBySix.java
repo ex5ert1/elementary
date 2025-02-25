@@ -1,7 +1,6 @@
 package ru.condition;
 
 public class DivideBySix {
-
     public static String checkNumber(int number) {
         String rsl;
         if (number % 3 == 0 && number % 2 == 0) {
@@ -13,9 +12,6 @@ public class DivideBySix {
         } else {
             rsl = "The number doesn't divide by 3 and it isn't the even number.";
         }
-        {
-            return rsl;
-        }
+        return rsl;
     }
 }
-
