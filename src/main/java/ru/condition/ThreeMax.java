@@ -4,13 +4,14 @@ public class ThreeMax {
     public static int max(int first, int second, int third) {
         int result = first;
 
-        if (first >= second && first >= third) {
-            result = first;
-        } else if (second >= first && second >= third) {
+        if (second > result) {
             result = second;
-        } else {
+        }
+
+        if (third > result) {
             result = third;
         }
+
         return result;
     }
 }
