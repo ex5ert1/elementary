@@ -7,10 +7,11 @@ public class ChessBoard {
             return 0;
         }
 
-        if (Math.abs(x1 - x2) == Math.abs(y1 - y2)) {
-            return Math.abs(x1 - x2);
+        if (Math.abs(x1 - x2) != Math.abs(y1 - y2)) {
+            return 0;
         }
-        return 0;
+
+        return Math.abs(x1 - x2);
     }
 
     private static boolean isValid(int coordinate) {
