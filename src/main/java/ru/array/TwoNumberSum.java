@@ -17,7 +17,7 @@ public class TwoNumberSum {
             }
         }
 
-        return new int[0];  // Если пара не найдена
+        return new int[0];
     }
 }
 
