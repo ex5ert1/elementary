@@ -4,38 +4,34 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class PointTest {
     @Test
     void when00to20then2() {
         double expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(2, 0);
+        double out = p1.distance(p2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when01to21then2() {
         double expected = 2;
-        int x1 = 0;
-        int y1 = 1;
-        int x2 = 2;
-        int y2 = 1;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point p1 = new Point(0, 1);
+        Point p2 = new Point(2, 1);
+        double out = p1.distance(p2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when1011to201110then99Dot5037() {
         double expected = 99.5037;
-        int x1 = 10;
-        int y1 = 11;
-        int x2 = 20;
-        int y2 = 110;
+        Point p1 = new Point(10, 11);
+        Point p2 = new Point(20, 110);
         double eps = 0.0001f;
-        double out = Point.distance(x1, y1, x2, y2);
+        double out = p1.distance(p2);
         assertThat(out).isEqualTo(expected, withPrecision(eps));
     }
 }
