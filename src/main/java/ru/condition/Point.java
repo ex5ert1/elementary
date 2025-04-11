@@ -10,7 +10,7 @@ public class Point {
     private int z;
 
     public Point(int first, int second) {
-        this(first, second, 0); // Вызов конструктора с тремя параметрами
+        this(first, second, 0);
     }
 
     public Point(int x, int y, int z) {
