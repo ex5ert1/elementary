@@ -1,8 +1,8 @@
 package ru.condition;
 
 public class Max {
-    public static int max(int left, int right) {
-        int result = left > right ? left : right;
+    public static int max(int a, int b) {
+        int result = a > b ? a : b;
         return result;
     }
 
