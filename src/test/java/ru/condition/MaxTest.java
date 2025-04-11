@@ -40,4 +40,45 @@ class MaxTest {
         int expected = 1;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenMaxThreeNumbersThenLargest() {
+        int a = 4;
+        int b = 9;
+        int c = 6;
+        int result = Max.max(a, b, c);
+        int expected = 9;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenMaxFourNumbersThenLargest() {
+        int a = 2;
+        int b = 8;
+        int c = 5;
+        int d = 8;
+        int result = Max.max(a, b, c, d);
+        int expected = 8;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenMaxNegativeNumbersThenLargest() {
+        int a = -3;
+        int b = -9;
+        int c = -6;
+        int result = Max.max(a, b, c);
+        int expected = -3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenMaxWithZeroThenCorrect() {
+        int a = 0;
+        int b = -5;
+        int c = 3;
+        int result = Max.max(a, b, c);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
 }
