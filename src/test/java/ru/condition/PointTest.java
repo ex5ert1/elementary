@@ -65,21 +65,35 @@ class PointTest {
 
     @Test
     void whenDiagonalDistance3d_thenCorrectResult() {
-        double expected = 14.1421;
+        double expected1 = 14.1421;
+        double expected2 = 7.0710;
         Point p1 = new Point(0, 0);
         Point p2 = new Point(10, 10);
+        Point p3 = new Point(5, 5);
         double eps = 0.0001f;
-        double out = p1.distance3d(p2);
-        assertThat(out).isEqualTo(expected, withPrecision(eps));
+        double out1 = p1.distance3d(p2);
+        double out2 = p1.distance3d(p3);
+        double out3 = p2.distance3d(p3);
+        assertThat(out1).isEqualTo(expected1, withPrecision(eps));
+        assertThat(out2).isEqualTo(expected2, withPrecision(eps));
+        assertThat(out3).isEqualTo(expected2, withPrecision(eps));
     }
 
     @Test
     void whenNegativeCoordinates_thenCorrectDistance3d() {
-        double expected = 5.0;
+        double expected1 = 5;
+        double expected2 = 2.2360;
+        double expected3 = 5.0990;
         Point p1 = new Point(-3, 4);
         Point p2 = new Point(0, 0);
-        double out = p1.distance3d(p2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        Point p3 = new Point(-1, 5);
+        double out1 = p1.distance3d(p2);
+        double out2 = p1.distance3d(p3);
+        double out3 = p2.distance3d(p3);
+        double eps = 0.0001f;
+        assertThat(out1).isEqualTo(expected1, withPrecision(eps));
+        assertThat(out2).isEqualTo(expected2, withPrecision(eps));
+        assertThat(out3).isEqualTo(expected3, withPrecision(eps));
     }
 
     @Test
@@ -87,7 +101,13 @@ class PointTest {
         double expected = 0;
         Point p1 = new Point(5, 5);
         Point p2 = new Point(5, 5);
-        double out = p1.distance3d(p2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        Point p3 = new Point(5, 5);
+        double out1 = p1.distance3d(p2);
+        double out2 = p1.distance3d(p3);
+        double out3 = p2.distance3d(p3);
+        double eps = 0.0001f;
+        assertThat(out1).isEqualTo(expected, withPrecision(eps));
+        assertThat(out2).isEqualTo(expected, withPrecision(eps));
+        assertThat(out3).isEqualTo(expected, withPrecision(eps));
     }
 }
