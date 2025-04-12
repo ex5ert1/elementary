@@ -62,4 +62,32 @@ class PointTest {
         double out = p1.distance(p2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void whenDiagonalDistance3d_thenCorrectResult() {
+        double expected = 14.1421;
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(10, 10);
+        double eps = 0.0001f;
+        double out = p1.distance3d(p2);
+        assertThat(out).isEqualTo(expected, withPrecision(eps));
+    }
+
+    @Test
+    void whenNegativeCoordinates_thenCorrectDistance3d() {
+        double expected = 5.0;
+        Point p1 = new Point(-3, 4);
+        Point p2 = new Point(0, 0);
+        double out = p1.distance3d(p2);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void whenSamePoints_thenZeroDistance3d() {
+        double expected = 0;
+        Point p1 = new Point(5, 5);
+        Point p2 = new Point(5, 5);
+        double out = p1.distance3d(p2);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+    }
 }
