@@ -67,9 +67,9 @@ class PointTest {
     void when00to1010to55thenCorrectResult() {
         double expected1 = 17.3205;
         double expected2 = 8.6602;
-        Point x = new Point(0, 0,0);
+        Point x = new Point(0, 0, 0);
         Point y = new Point(10, 10, 10);
-        Point z = new Point(5, 5,5);
+        Point z = new Point(5, 5, 5);
         double eps = 0.0001f;
         double out1 = x.distance3d(y);
         double out2 = x.distance3d(z);
@@ -85,8 +85,8 @@ class PointTest {
         double expected2 = 5.4772;
         double expected3 = 0.0;
         Point p1 = new Point(-3, 4, 2);
-        Point p2 = new Point(0, 0,0);
-        Point p3 = new Point(-1, 5,2);
+        Point p2 = new Point(0, 0, 0);
+        Point p3 = new Point(-1, 5, 2);
         double out1 = p1.distance3d(p2);
         double out2 = p2.distance3d(p3);
         double out3 = p3.distance3d(p3);
@@ -99,9 +99,9 @@ class PointTest {
     @Test
     void whenSamePoints_thenZeroDistance3d() {
         double expected = 0;
-        Point p1 = new Point(5, 5,5);
-        Point p2 = new Point(5, 5,5);
-        Point p3 = new Point(5, 5,5);
+        Point p1 = new Point(5, 5, 5);
+        Point p2 = new Point(5, 5, 5);
+        Point p3 = new Point(5, 5, 5);
         double out1 = p1.distance3d(p2);
         double out2 = p1.distance3d(p3);
         double out3 = p2.distance3d(p3);
